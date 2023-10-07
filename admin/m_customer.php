@@ -1,3 +1,9 @@
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
 <?php 
 include 'header.php';
 
@@ -19,15 +25,15 @@ if(isset($_GET['page'])){
 
 
 <div class="container">
-	<h2 style=" width: 100%; border-bottom: 4px solid gray"><b>Data Customer</b></h2>
-	<table class="table table-striped">
+	<h2 style=" width: 100%;"><b>Data Customer</b></h2>
+	<table class="table">
 		<thead>
 			<tr>
 				<th scope="col">No</th>
 				<th scope="col">Kode Customer</th>
 				<th scope="col">Nama</th>
 				<th scope="col">Email</th>
-				<th scope="col">Action</th>
+				<th scope="col">Aksi</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -88,3 +94,9 @@ if(isset($_GET['page'])){
 <?php 
 include 'footer.php';
 ?>
+
+<style>
+	body{
+		font-family: poppins;
+	}
+</style>

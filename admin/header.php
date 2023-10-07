@@ -9,7 +9,7 @@ if(!isset($_SESSION['admin'])){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Rafy Backery</title>
+	<title>Zilvi Medical</title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.css">
@@ -20,7 +20,7 @@ if(!isset($_SESSION['admin'])){
 </head>
 <body>
 
-	<nav class="navbar navbar-default" style="padding: 5px;">
+	<nav class="navbar" style="padding: 5px; background-color: #DAFFFB;">
 		<div class="container">
 
 			<div class="navbar-header">
@@ -35,46 +35,44 @@ if(!isset($_SESSION['admin'])){
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-left">
 
-					<li class="dropdown">
+					<!-- <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-folder-close"></i> Data Master <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="m_produk.php">Master Produk</a></li>
 							<li><a href="m_customer.php">Master Customer</a></li>
 						</ul>
-					</li>
+					</li> -->
 
-					<li class="dropdown">
+					<!-- <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-retweet"></i> Data Transaksi <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="produksi.php">Produksi</a></li>
 							<li><a href="inventory.php">Inventory</a></li>
 							
 						</ul>
-					</li>
-
-					<li class="dropdown">
+					</li> -->
+					<li><a href="m_customer.php">Daftar Pelanggan</a></li>
+					<li><a href="m_produk.php">Daftar Produk</a></li>
+					<li><a href="laporan_penjualan.php">Laporan</a></li>
+					<!-- <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-stats"></i> Laporan <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="laporan_penjualan.php">Laporan Penjualan</a></li>
-							<li><a href="laporan_profit.php">Laporan Profit</a></li>
-							<li><a href="laporan_omset.php">Laporan Omset</a></li>
 							<li><a href="laporan_pembatalan.php">Laporan Pembatalan	</a></li>
-							<li><a href="laporan_inventory.php">Laporan Inventory</a></li>
-							<li><a href="laporan_produksi.php">Laporan Produksi</a></li>
 						</ul>
-					</li>
+					</li> -->
 					<li><a href="halaman_utama.php">Dashboard</a></li>
 
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
+					<!-- <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-cog"></i> Pemeliharaan <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="../DATABASE/backup.php">Backup Database</a></li>
 							<li><a href="../DATABASE/retrieve.php">Retrieve Database</a></li>
 						</ul>
-					</li>
+					</li> -->
 
 
 					<li class="dropdown">
