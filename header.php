@@ -19,36 +19,11 @@ if(isset($_SESSION['kd_cs'])){
 
 </head>
 <body>
-	<!-- <div class="container-fluid">
-		<div class="row top">
-			<center>
-				<div class="col-md-4" style="padding: 3px;">
-					<span> <i class="glyphicon glyphicon-earphone"></i> +6287804616097</span>
-				</div>
-
-
-				<div class="col-md-4"  style="padding: 3px;">
-					<span><i class="glyphicon glyphicon-envelope"></i> rapi-cakebakery@gmail.com</span>
-				</div>
-
-
-				<div class="col-md-4"  style="padding: 3px;">
-					<span>rapi-cake bakery Indonesia</span>
-				</div>
-			</center>
-		</div>
-	</div> -->
 
 	<nav class="navbar">
 		<div class="container">
 
 			<div class="navbar-header">
-				<!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button> -->
 				<a class="navbar-brand"><b>ZILVI MEDICAL</b></a>
 			</div>
 

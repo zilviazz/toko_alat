@@ -1,3 +1,9 @@
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
 <?php 
 include 'header.php';
 $kd = mysqli_real_escape_string($conn,$_GET['kode_cs']);
@@ -6,7 +12,7 @@ $rows = mysqli_fetch_assoc($cs);
 ?>
 
 <div class="container" style="padding-bottom: 200px">
-	<h2 style=" width: 100%; border-bottom: 4px solid #ff8680"><b>Checkout</b></h2>
+	<h2 style=" width: 100%; font-family: poppins;"><b>Checkout</b></h2>
 	<div class="row">
 		<div class="col-md-6">
 			<h4>Daftar Pesanan</h4>
@@ -15,8 +21,8 @@ $rows = mysqli_fetch_assoc($cs);
 					<th>No</th>
 					<th>Nama</th>
 					<th>Harga</th>
-					<th>Qty</th>
-					<th>Sub Total</th>
+					<th>Jumlah</th>
+					<th>Total</th>
 				</tr>
 				<?php 
 				$result = mysqli_query($conn, "SELECT * FROM keranjang WHERE kode_customer = '$kd'");
@@ -38,21 +44,18 @@ $rows = mysqli_fetch_assoc($cs);
 				}
 				?>
 				<tr>
-					<td colspan="5" style="text-align: right; font-weight: bold;">Grand Total = <?= number_format($hasil); ?></td>
+					<td colspan="5" style="text-align: right; font-weight: bold;">Total Keseluruhan = <?= number_format($hasil); ?></td>
 				</tr>
 			</table>
 		</div>
 
 	</div>
 	<div class="row">
-	<div class="col-md-6 bg-success">
-		<h5>Pastikan Pesanan Anda Sudah Benar</h5>
-	</div>
 	</div>
 	<br>
 	<div class="row">
 	<div class="col-md-6 bg-warning">
-		<h5>isi Form dibawah ini </h5>
+		<h5>Isi Data untuk pengiriman </h5>
 	</div>
 	</div>
 	<br>
@@ -103,3 +106,9 @@ $rows = mysqli_fetch_assoc($cs);
 <?php 
 include 'footer.php';
 ?>
+
+<style>
+	body{
+		font-family: poppins;
+	}
+</style>

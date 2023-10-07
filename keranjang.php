@@ -22,14 +22,6 @@ if(isset($_POST['submit1'])){
 }else if(isset($_GET['del'])){
 	$id_keranjang = $_GET['id'];
 	$del = mysqli_query($conn, "DELETE FROM keranjang WHERE id_keranjang = '$id_keranjang'");
-	if($del){
-		echo "
-		<script>
-		alert('1 PRODUK DIHAPUS');
-		window.location = 'keranjang.php';
-		</script>
-		";
-	}
 }
 
 ?>
@@ -108,16 +100,17 @@ if(isset($_POST['submit1'])){
 						<th scope='col'>Aksi</th>
 						</tr>
 						<tr>
-						<td colspan='7' class='text-center bg-warning'><h5><b>KERANJANG BELANJA ANDA KOSONG </b></h5></td>
+						<td colspan='7' class='text-center bg-warning'><h5><b>KERANJANG ANDA MASIH KOSONG, SILAHKAN MELAKUKAN PEMBELIAN!</b></h5></td>
 						</tr>
 
 						";
 					}
 
 				}else{
-					echo "<tr>
-					<td colspan='7' class='text-center bg-danger'><h5><b>SILAHKAN LOGIN TERLEBIH DAHULU SEBELUM BERBELANJA</b></h5></td>
-					</tr>";
+					echo "<script>
+					alert('MAAF ANDA BELUM LOGIN!');
+					window.location = 'user_login.php';
+					</script>";
 				}
 				?>
 
