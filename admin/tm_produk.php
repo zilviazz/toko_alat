@@ -1,3 +1,9 @@
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
 <?php 
 include 'header.php';
 // generate kode material
@@ -62,73 +68,6 @@ else if(strlen($add) == 3){
 
 			</textarea>
 		</div>
-		<hr>
-		<h3 style=" width: 100%; border-bottom: 4px solid gray">BOM Produk</h3>
-		<br>
-		<div class="row">
-			<div class="col-md-6">
-				<h4>Daftar Material yang ada di Gudang/Inventory</h4>
-				<table class="table table-striped ">
-					<thead>
-						<tr>
-							<th scope="col">No</th>
-							<th scope="col">Kode Material</th>
-							<th scope="col">Nama Material</th>
-						</tr>
-					</thead>
-					<?php 
-					$result2 = mysqli_query($conn, "SELECT * FROM inventory order by kode_bk asc");
-					$no2 =1;
-					while ($row2 = mysqli_fetch_assoc($result2)) {
-						?>
-						<tbody>
-							<tr>
-								<th scope="row"><?= $no2;  ?></th>
-								<td><?= $row2['kode_bk']; ?></td>
-								<td><?= $row2['nama']; ?></td>
-							</tr>
-						</tbody>
-						<?php 
-						$no2++;
-					}
-					?>
-				</table>
-			</div>
-
-
-			<div class="col-md-6">
-				<h4>Pilih material yang hanya dibutuhkan untuk produk</h4>
-				<div class="bg-danger" style="padding: 5px;">
-				<p style="color: red; font-weight: bold;">NB. Form dibawah tidak harus diisi semua</p>
-				<p style="color: red; font-weight: bold;">Kode Material tidak boleh sama</p>
-				</div>
-				<br>
-				<?php 
-				$result3 = mysqli_query($conn, "SELECT * FROM inventory");
-				$jml = mysqli_num_rows($result3);
-				$no3 = 1	;
-				while ($no3 <= $jml) {
-					?>
-
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="exampleInputPassword1">Kode Material</label>
-								<input type="text" name="material[]" class="form-control" placeholder="Masukkan Kode Material">
-							</div>
-						</div>
-
-						<div class="col-md-6">
-							<div class="form-group">
-								<label >Kebutuhan Material</label>
-								<input type="text" class="form-control"placeholder="Contoh : 250 atau 0.2" name="keb[]">
-							</div>
-						</div>
-					</div>
-					<?php 
-					$no3++;
-				}	
-				?>
 
 			</div>
 		</div>
@@ -167,3 +106,9 @@ else if(strlen($add) == 3){
 <?php 
 include 'footer.php';
 ?>
+
+<style>
+	body{
+		font-family: poppins;
+	}
+</style>

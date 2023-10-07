@@ -13,7 +13,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <!-- <div class="thumbnail" style="padding-bottom: 100px; margin-left: 80px; padding-left: 20px;"> -->
-		<h2 style=" width: 100%; text-align: center; font-family: poppins; margin-top: 50px;"><b>Selamat datang di Toko Kesehatan</b></h2>
+		<h2 style=" width: 100%; text-align: center; font-family: poppins; margin-top: 50px;"><b>Selamat datang di ZILVI MEDICAL</b></h2>
 <div class="isi">
 	<h2 style="text-align: center;">LOGIN</h2>
 <form action="proses/login.php" method="POST">
@@ -26,8 +26,8 @@
 			<label for="exampleInputEmail1">Password</label>
 			<input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password" name="pass" style="width: 500px;">
 		</div>
-		<button type="submit" class="btn btn-success">Login</button>
-		<a href="register.php" class="btn btn-primary">Daftar</a>
+		<button type="submit" class="btn btn-primary">Login</button>
+		<a href="register.php" class="btn btn-info">Register</a>
 	</form>
 </div>
 </div>

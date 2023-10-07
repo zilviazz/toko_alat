@@ -3,11 +3,15 @@ include 'header.php';
 ?>
 
 <div class="form" style="padding-bottom: 250px;">
-	<h2 style=" width: 100%;"><b>Register</b></h2>
+	<h2 style=" width: 100%;"><b>Form Register</b></h2>
 	<form action="proses/register.php" method="POST">
 		<div class="row">
 				<div class="form-group">
-					<label for="exampleInputPassword1">username</label>
+					<!-- awalnya nama -->
+					<label for="exampleInputPassword1">Nama</label>
+					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nama" name="nama" required>
+
+					<label for="exampleInputPassword1">Username</label>
 					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Username" name="username" required >
 				
 					<label for="exampleInputPassword1">Password</label>
@@ -18,10 +22,9 @@ include 'header.php';
 				
 					<label for="exampleInputPassword1">Email</label>
 					<input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email" name="email" required>
-
-					<!-- awalnya nama -->
-					<label for="exampleInputPassword1">Date of birth</label>
-					<input type="date" class="form-control" id="exampleInputPassword1" placeholder="Tanggal Lahir" name="nama" required>
+					
+					<label for="exampleInputPassword1">Day Of Birth</label>
+					<input type="date" class="form-control" id="exampleInputPassword1" placeholder="Tanggal Lahir" name="ttl" required>
 
 					<!-- tidak ada di db -->
 					<label for="exampleInputPassword1">Gender</label>
@@ -35,19 +38,29 @@ include 'header.php';
   					</div>
 					
 					<!-- tidak ada di db -->
-					<label for="exampleInputPassword1">Adrress</label>
-					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Alamat" name="nama" required>
+					<label for="exampleInputPassword1">Address</label>
+					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Alamat" name="alamat" required>
 
 					<!-- tidak ada di db -->
 					<label for="exampleInputPassword1">City</label>
-					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Kota" name="nama" required>
+					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Kota" name="kota" required>
 
 					<!-- tidak ada di db -->
-					<label for="exampleInputPassword1">Connect no</label>
-					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Connect no" name="nama" required>
+					<label for="exampleInputPassword1">No.Telp</label>
+					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="No. Telp" name="telp" required>
 
 					<label for="exampleInputPassword1">Pay-pal id :</label>
-					<button type="submit" class="btn btn-success">Register</button>
+					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="PayPal" name="paypal" required>
+					<br>
+					<!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Connect no" name="nama"> -->
+					<table>
+						<tr>
+							<td><button type="submit" class="btn btn-primary">Register</button></td>
+							<td>&nbsp&nbsp</td>
+							<td><button type="reset" class="btn btn-info">Clear</button></td>
+						</tr>
+					</table>
+					
 				</div>
 		</div>
 	</form>
@@ -63,8 +76,8 @@ include 'footer.php';
   border: 1px solid #ccc;
   background-color: white;
   border-radius: 10px;
-  max-width: 650px;
-  max-height: 750px;
+  max-width: 600px;
+  max-height: 900px;
   margin: 0 auto;
   margin-bottom: 20px;
 }

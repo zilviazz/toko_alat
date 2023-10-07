@@ -55,12 +55,12 @@ $rows = mysqli_fetch_assoc($cs);
 	<br>
 	<div class="row">
 	<div class="col-md-6 bg-warning">
-		<h5>Isi Data untuk pengiriman </h5>
+		<h5>Pastikan produk dan jumlahnya sudah sesuai. </h5>
 	</div>
 	</div>
 	<br>
 	<form action="proses/order.php" method="POST">
-		<input type="hidden" name="kode_cs" value="<?= $kd; ?>">
+		<!-- <input type="hidden" name="kode_cs" value="<?= $kd; ?>">
 		<div class="form-group">
 			<label for="exampleInputEmail1">Nama</label>
 			<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nama" name="nama" style="width: 557px;" value="<?= $rows['nama']; ?>" readonly>
@@ -95,9 +95,9 @@ $rows = mysqli_fetch_assoc($cs);
 					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Kode Pos" name="kopos">
 				</div>
 			</div>
-		</div>
-
-		<button type="submit" class="btn btn-success"><i class="glyphicon glyphicon-shopping-cart"></i> Order Sekarang</button>
+		</div> -->
+		<!-- <button type="submit" class="btn btn-success">Pesan Sekarang</button> -->
+		<a href="selesai.php?kode_cs=<?= $kode_cs; ?>" class="btn btn-primary">Pesan Sekarang</a>
 		<a href="keranjang.php" class="btn btn-danger">Cancel</a>
 	</form>
 </div>

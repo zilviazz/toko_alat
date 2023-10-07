@@ -14,7 +14,7 @@ include 'header.php';
 			<td>
 				<h2 class="datang">Selamat datang!</h2>
 				<h4 class="text-left">Tempat di mana kesehatan dan kesejahteraan Anda menjadi prioritas utama. Kami adalah mitra yang andal untuk semua kebutuhan perawatan kesehatan dan kesejahteraan Anda. Temukan alat kesehatan terbaik untuk Anda dengan berbelanja di e-commerce kami.</h4>
-				<a href="produk.php" class="btn btn-primary" role="button" style="margin-left: 50px;">Beli Sekarang</a> 
+				<a href="produk.php" class="btn btn-primary" role="button" style="margin-left: 50px;">Belanja Sekarang</a> 
 			</td>
 			<td>
 				<div class="image" style="margin-top: -21px">
@@ -41,8 +41,8 @@ include 'header.php';
 					<img src="image/produk/<?= $row['image']; ?>" >
 					<div class="caption">
 						<h3><?= $row['nama'];  ?></h3>
-						<h5><?= ($row['deskripsi']); ?></h5>
-						<h5>Rp.<?= number_format($row['harga']); ?></h5>
+						<h6><?= ($row['deskripsi']); ?></h6>
+						<h5><b>Rp.<?= number_format($row['harga']); ?></b></h5>
 						<div class="row">
 							<div class="col-md-6">
 								<a href="detail_produk.php?produk=<?= $row['kode_produk']; ?>" class="btn btn-info btn-block">View</a> 
@@ -82,6 +82,9 @@ include 'header.php';
 include 'footer.php';
 ?>
 <style>
+	body{
+		font-family: poppins; 
+	}
 	h4{
 		font-family: poppins; 
 		font-size: 15px; 

@@ -85,7 +85,7 @@ if(isset($_POST['submit1'])){
 							<td colspan="7" style="text-align: right; font-weight: bold;">Total Keseluruhan = Rp.<?= number_format($hasil); ?></td>
 						</tr>
 						<tr>
-							<td colspan="7" style="text-align: right; font-weight: bold;"><a href="produk.php" class="btn btn-info">Back</a> <a href="checkout.php?kode_cs=<?= $kode_cs; ?>" class="btn btn-primary">Checkout</a></td>
+							<td colspan="7" style="text-align: right; font-weight: bold;"><a href="produk.php" class="btn btn-info">Belanja Lagi</a> <a href="checkout.php?kode_cs=<?= $kode_cs; ?>" class="btn btn-primary">Checkout</a></td>
 						</tr>
 						<?php 
 					}else{
@@ -102,7 +102,9 @@ if(isset($_POST['submit1'])){
 						<tr>
 						<td colspan='7' class='text-center bg-warning'><h5><b>KERANJANG ANDA MASIH KOSONG, SILAHKAN MELAKUKAN PEMBELIAN!</b></h5></td>
 						</tr>
-
+						<tr>
+						<td><a href='produk.php' class='btn btn-primary' role='button'>Belanja Sekarang</a></td>
+						</tr>
 						";
 					}
 

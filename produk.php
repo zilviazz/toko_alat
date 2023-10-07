@@ -6,10 +6,29 @@
 
 <?php 
 	include 'header.php';
+	$kd = mysqli_real_escape_string($conn,$_GET['id_kategori']);
+	$kt = mysqli_query($conn, "SELECT * FROM kategori_produk WHERE id_kategori = '$kd'");
+	$rows = mysqli_fetch_assoc($kt);
  ?>
 
 <!-- PRODUK TERBARU -->
 <div class="container">
+	<div class="category">
+            <h2>Kategori</h2>
+			<?php 
+					$result1 = mysqli_query($conn, "SELECT * FROM kategori_produk WHERE id_kategori = '$kd'");
+					while($row = mysqli_fetch_assoc($result1)){
+						?>
+						 <ul>
+							<li><a href="#"></a><?= $row['nama_kategori']; ?></li>
+							<li><a href="#">Alat Bedah</a></li>
+							<li><a href="#">Alat Terapi</a></li>
+						</ul>
+						<?php 
+						
+					}
+					?>
+        </div>
 	<h2 style="width: 100%; font-family: poppins;"><b>Daftar Produk</b></h2>
 
 	<div class="row">
@@ -22,8 +41,8 @@
 					<img src="image/produk/<?= $row['image']; ?>" >
 					<div class="caption">
 						<h3><?= $row['nama'];  ?></h3>
-						<h5><?= ($row['deskripsi']); ?></h5>
-						<h4>Rp.<?= number_format($row['harga']); ?></h4>
+						<h6><?= ($row['deskripsi']); ?></h6>
+						<h4><b>Rp.<?= number_format($row['harga']); ?></b></h4>
 						<div class="row">
 							<div class="col-md-6">
 								<a href="detail_produk.php?produk=<?= $row['kode_produk']; ?>" class="btn btn-info btn-block">View</a> 
@@ -59,3 +78,9 @@
  <?php 
 	include 'footer.php';
  ?>
+
+ <style>
+	body{
+		font-family: poppins;
+	}
+ </style>

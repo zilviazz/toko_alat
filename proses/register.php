@@ -21,8 +21,11 @@ $password = $_POST['password'];
 $email = $_POST['email'];
 $tlp = $_POST['telp'];
 $konfirmasi = $_POST['konfirmasi'];
-
-
+$alamat = $_POST['alamat'];
+$kota = $_POST['kota'];
+$gender = $_POST['gender'];
+$ttl = $_POST['ttl'];
+$paypal = $_POST['paypal'];
 
 $hash = password_hash($password, PASSWORD_DEFAULT);
 
@@ -40,7 +43,7 @@ if($password == $konfirmasi){
 		die;
 	}
 
-	$result = mysqli_query($conn, "INSERT INTO customer VALUES('$format','$nama', '$email', '$username', '$hash', '$tlp')");
+	$result = mysqli_query($conn, "INSERT INTO customer VALUES('$format','$nama', '$email', '$username', '$hash', '$tlp', '$alamat', '$kota', '$gender', '$paypal','$ttl')");
 	if($result){
 		echo "
 		<script>
