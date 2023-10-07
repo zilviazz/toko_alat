@@ -30,7 +30,7 @@
 							</div>
 							<?php if(isset($_SESSION['kd_cs'])){ ?>
 								<div class="col-md-6">
-									<a href="proses/add.php?produk=<?= $row['kode_produk']; ?>&kd_cs=<?= $kode_cs; ?>&hal=1" class="btn btn-primary btn-block" role="button"><i class="glyphicon glyphicon-shopping-cart"></i> Tambah</a>
+									<a href="proses/add.php?produk=<?= $row['kode_produk']; ?>&kd_cs=<?= $kode_cs; ?>&hal=1" class="btn btn-primary btn-block" role="button">Buy</a>
 								</div>
 								<?php 
 							}
