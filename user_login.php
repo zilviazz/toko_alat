@@ -1,10 +1,21 @@
 <?php 
 	include 'header.php';
  ?>
-
-<div class="thumbnail" style="padding-bottom: 100px; margin-left: 80px; padding-left: 20px;">
-		<h2 style=" width: 100%;"><b>Login</b></h2>
-
+<head>
+<title>Zilvi Medical</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	<script  src="js/jquery.js"></script>
+	<script  src="js/bootstrap.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<!-- <div class="thumbnail" style="padding-bottom: 100px; margin-left: 80px; padding-left: 20px;"> -->
+		<h2 style=" width: 100%; text-align: center; font-family: poppins; margin-top: 50px;"><b>Selamat datang di Toko Kesehatan</b></h2>
+<div class="isi">
+	<h2 style="text-align: center;">LOGIN</h2>
 <form action="proses/login.php" method="POST">
 		<div class="form-group">
 			<label for="exampleInputEmail1">User ID</label>
@@ -19,8 +30,28 @@
 		<a href="register.php" class="btn btn-primary">Daftar</a>
 	</form>
 </div>
+</div>
 
 
  <?php 
 	include 'footer.php';
  ?>
+
+ <style>
+	 *{
+		 margin: 0;
+		 padding: 0;
+		 box-sizing: border-box;
+		 font-family : poppins;
+	 }
+	 .isi {
+	  margin: 0 auto;
+      border: solid 1px gray;
+	  border: 1 px;
+      width: 550px;
+      padding: 2%;
+      border-radius: 10px;
+	  margin-top: 20px;
+	  margin-bottom: 70px;
+    }
+ </style>
