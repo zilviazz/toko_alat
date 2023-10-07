@@ -1,3 +1,9 @@
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
 <?php 
 include 'header.php';
 $kode = mysqli_real_escape_string($conn,$_GET['produk']);
@@ -6,7 +12,7 @@ $row = mysqli_fetch_assoc($result);
 
 ?>
 <div class="container">
-	<h2 style=" width: 100%; border-bottom: 4px solid #ff8680"><b>Detail produk</b></h2>
+	<h2 style=" width: 100%; font-family: poppins"><b>Detail Produk</b></h2>
 
 	<div class="row">
 		<div class="col-md-4">
@@ -20,19 +26,16 @@ $row = mysqli_fetch_assoc($result);
 				<input type="hidden" name="kd_cs" value="<?= $kode_cs; ?>">
 				<input type="hidden" name="produk" value="<?= $kode;  ?>">
 				<input type="hidden" name="hal"  value="2">
-				<table class="table table-striped">
+				<h1><?= $row['nama']; ?></h1>
+				<table class="table">
 					<tbody>
 						<tr>
-							<td><b>Nama</b></td>
-							<td><?= $row['nama']; ?></td>
+							<td><b>Deskripsi</b></td>
+							<td><?= $row['deskripsi'];  ?></td>
 						</tr>
 						<tr>
 							<td><b>Harga</b></td>
 							<td>Rp.<?= number_format($row['harga']); ?></td>
-						</tr>
-						<tr>
-							<td><b>Deskripsi</b></td>
-							<td><?= $row['deskripsi'];  ?></td>
 						</tr>
 						<tr>
 							<td><b>Jumlah</b></td>
@@ -43,16 +46,16 @@ $row = mysqli_fetch_assoc($result);
 				<?php 
 				if(isset($_SESSION['user'])){
 					?>
-					<button type="submit" class="btn btn-success"><i class="glyphicon glyphicon-shopping-cart"></i> Tambahkan ke Keranjang</button>
+					<button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-shopping-cart"></i> Tambah</button>
 					<?php 
 				}else{
 
 					?>
-					<a href="keranjang.php" class="btn btn-success"><i class="glyphicon glyphicon-shopping-cart"></i> Tambahkan ke Keranjang</a>
+					<a href="keranjang.php" class="btn btn-primary"><i class="glyphicon glyphicon-shopping-cart"></i> Tambah</a>
 					<?php 
 				}
 				?>
-				<a href="index.php" class="btn btn-warning"> Kembali Belanja</a>
+				<a href="produk.php" class="btn btn-danger">Back</a>
 			</div>
 		</form>
 	</div>
