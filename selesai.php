@@ -4,7 +4,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
-
 <?php 
 include 'header.php';
 $kd = mysqli_real_escape_string($conn,$_GET['kode_cs']);
@@ -28,7 +27,7 @@ $rows = mysqli_fetch_assoc($cs);
 							<td><?= $row['kode_customer']; ?></td>
 							<td>Tanggal</td>
 							<td>:</td>
-							<td>7 Oktober 2023</td>
+							<td>8 Oktober 2023</td>
 						</tr>
 						</tr>
 						<tr>
@@ -43,17 +42,20 @@ $rows = mysqli_fetch_assoc($cs);
 							<td>Alamat</td>
 							<td>:</td>
 							<td><?= $row['alamat']; ?></td>
-							<td>Nama Bank</td>
-							<td>:</td>
-							<td>BRI</td>
-						</tr>
-						<tr>
 							<td>No. HP</td>
 							<td>:</td>
 							<td><?= $row['telp']; ?></td>
-							<td>Cara Bayar</td>
+							<!-- <td>Nama Bank</td>
 							<td>:</td>
-							<td>Prepaid</td>
+							<td>BRI</td> -->
+						</tr>
+						<tr>
+							<!-- <td>No. HP</td>
+							<td>:</td>
+							<td><?= $row['telp']; ?></td> -->
+							<!-- <td>Cara Bayar</td>
+							<td>:</td>
+							<td>Prepaid</td> -->
 						</tr>
 						<?php 
 						
@@ -89,6 +91,9 @@ $rows = mysqli_fetch_assoc($cs);
 				<tr>
 					<td colspan="5" style="text-align: left; font-weight: bold;">Total belanja (termasuk pajak): <?= number_format($hasil); ?></td>
 				</tr>
+				<tr>
+					<td colspan="5" style="text-align: right; font-weight: bold;">TTD ZILVI MEDICAL</td>
+				</tr>
 			</table>
 			
 		</div>
@@ -96,7 +101,7 @@ $rows = mysqli_fetch_assoc($cs);
 	</div>
 	<form action="proses/order.php" method="POST">
 
-		<a href="" onclick="window.print()" class="btn btn-default"><i class="glyphicon glyphicon-print"></i>Cetak Invoice</a>
+		<a href="" onclick="window.print()" class="btn btn-default"><i class="glyphicon glyphicon-print"></i> Cetak Invoice</a>
 		<a href="keranjang.php?hapus_keranjang=<?= $kd; ?>" class="btn btn-danger">Back</a>
 	</form>
 </div>

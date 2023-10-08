@@ -18,7 +18,7 @@
 <div class="container">
 <div class="col-md-3">
 			<div class="category">
-				<h2>Kategori</h2>
+				<h2><b>Kategori</b></h2>
 				<ul>
 					<?php 
 						$result1 = mysqli_query($conn, "SELECT * FROM kategori_produk");
