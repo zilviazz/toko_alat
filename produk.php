@@ -6,32 +6,34 @@
 
 <?php 
 	include 'header.php';
-	$kd = mysqli_real_escape_string($conn,$_GET['id_kategori']);
-	$kt = mysqli_query($conn, "SELECT * FROM kategori_produk WHERE id_kategori = '$kd'");
-	$rows = mysqli_fetch_assoc($kt);
+	// $kd = mysqli_real_escape_string($conn,$_GET['id_kategori']);
+	// $kt = mysqli_query($conn, "SELECT * FROM kategori_produk WHERE id_kategori = '$kd'");
+	// $rows = mysqli_fetch_assoc($kt);
  ?>
 
 <!-- PRODUK TERBARU -->
 <div class="container">
-	<div class="category">
-            <h2>Kategori</h2>
-			<?php 
-					$result1 = mysqli_query($conn, "SELECT * FROM kategori_produk WHERE id_kategori = '$kd'");
-					while($row = mysqli_fetch_assoc($result1)){
-						?>
-						 <ul>
-							<li><a href="#"></a><?= $row['nama_kategori']; ?></li>
-							<li><a href="#">Alat Bedah</a></li>
-							<li><a href="#">Alat Terapi</a></li>
-						</ul>
-						<?php 
-						
-					}
-					?>
-        </div>
-	<h2 style="width: 100%; font-family: poppins;"><b>Daftar Produk</b></h2>
-
 	<div class="row">
+		<!-- Categories on the left -->
+		<div class="col-md-3">
+			<div class="category">
+				<h2>Kategori</h2>
+				<ul>
+					<?php 
+						$result1 = mysqli_query($conn, "SELECT * FROM kategori_produk");
+						while($row = mysqli_fetch_assoc($result1)){
+					?>
+					<li><a href="kategori_proses.php?kategori=<?= $row['id_kategori']; ?>"><?= $row['nama_kategori']; ?></a></li>
+					<?php 
+						}
+					?>
+				</ul>
+			</div>
+		</div>
+		<!-- Products on the right using a table -->
+		<div class="col-md-9">
+			<h2 style="width: 100%; font-family: poppins;"><b>Daftar Semua Produk</b></h2>
+			<div class="row">
 		<?php 
 		$result = mysqli_query($conn, "SELECT * FROM produk");
 		while ($row = mysqli_fetch_assoc($result)) {
@@ -58,13 +60,11 @@
 								<div class="col-md-6">
 									<a href="keranjang.php" class="btn btn-primary btn-block" role="button"></i>Buy</a>
 								</div>
-
 								<?php 
 							}
 							?>
 
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -72,7 +72,8 @@
 		}
 		?>
 	</div>
-
+		</div>
+	</div>
 </div>
 
  <?php 
