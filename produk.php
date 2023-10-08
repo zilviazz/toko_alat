@@ -6,9 +6,8 @@
 
 <?php 
 	include 'header.php';
-	// $kd = mysqli_real_escape_string($conn,$_GET['id_kategori']);
-	// $kt = mysqli_query($conn, "SELECT * FROM kategori_produk WHERE id_kategori = '$kd'");
-	// $rows = mysqli_fetch_assoc($kt);
+	// Waktu awal eksekusi
+	$start_time = microtime(true);
  ?>
 
 <!-- PRODUK TERBARU -->
@@ -78,6 +77,13 @@
 
  <?php 
 	include 'footer.php';
+	// Waktu akhir eksekusi
+	$end_time = microtime(true);
+
+	// Menghitung waktu eksekusi
+	$execution_time = ($end_time - $start_time);
+
+	echo "Waktu eksekusi: " . $execution_time . " detik";
  ?>
 
  <style>
