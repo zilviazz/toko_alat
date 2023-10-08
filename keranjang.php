@@ -6,6 +6,16 @@
 
 <?php 
 include 'header.php';
+
+if (isset($_GET['hapus_keranjang'])) {
+    $kd = mysqli_real_escape_string($conn, $_GET['hapus_keranjang']);
+
+    // Hapus semua item keranjang yang terkait dengan kode pelanggan
+    $queryHapusKeranjang = "DELETE FROM keranjang WHERE kode_customer = '$kd'";
+    mysqli_query($conn, $queryHapusKeranjang);
+}
+
+
 if(isset($_POST['submit1'])){
 	$id_keranjang = $_POST['id'];
 	$qty = $_POST['qty'];

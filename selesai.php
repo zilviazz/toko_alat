@@ -4,6 +4,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
+
 <?php 
 include 'header.php';
 $kd = mysqli_real_escape_string($conn,$_GET['kode_cs']);
@@ -94,44 +95,9 @@ $rows = mysqli_fetch_assoc($cs);
 
 	</div>
 	<form action="proses/order.php" method="POST">
-		<!-- <input type="hidden" name="kode_cs" value="<?= $kd; ?>">
-		<div class="form-group">
-			<label for="exampleInputEmail1">Nama</label>
-			<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nama" name="nama" style="width: 557px;" value="<?= $rows['nama']; ?>" readonly>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="form-group">
-					<label for="exampleInputPassword1">Provinsi</label>
-					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Provinsi" name="prov">
-				</div>
-			</div>
 
-			<div class="col-md-6">
-				<div class="form-group">
-					<label for="exampleInputPassword1">Kota</label>
-					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Kota" name="kota">
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-6">
-				<div class="form-group">
-					<label for="exampleInputPassword1">Alamat</label>
-					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Alamat" name="almt">
-				</div>
-			</div>
-
-			<div class="col-md-6">
-				<div class="form-group">
-					<label for="exampleInputPassword1">Kode Pos</label>
-					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Kode Pos" name="kopos">
-				</div>
-			</div>
-		</div> -->
-
-		<a href="keranjang.php" class="btn btn-default"><i class="glyphicon glyphicon-print"></i>>Cetak Invoice</a>
+		<a href="" onclick="window.print()" class="btn btn-default"><i class="glyphicon glyphicon-print"></i>Cetak Invoice</a>
+		<a href="keranjang.php?hapus_keranjang=<?= $kd; ?>" class="btn btn-danger">Back</a>
 	</form>
 </div>
 
